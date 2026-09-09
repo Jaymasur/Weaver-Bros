@@ -19,6 +19,10 @@
   section {
     padding: 60px;
   }
+  header,
+  .section-testimonials {
+    background-attachment: scroll;
+  }
   .long-copy {
     width: 80%;
     margin-left: 10%;
@@ -92,6 +96,25 @@
   .hero-text-box {
     padding: 0 4%;
   }
+  .hero-text-box {
+    width: 100%;
+  }
+  h1 {
+    font-size: 170%;
+    line-height: 1.3;
+    word-spacing: 1px;
+  }
+  h2 {
+    font-size: 140%;
+  }
+  .logo {
+    font-size: 120%;
+    margin-top: 22px;
+  }
+  .logo-black {
+    font-size: 120%;
+    margin-top: 12px;
+  }
   .col {
     width: 100%;
     margin: 0 0 4% 0;
@@ -104,12 +127,14 @@
   .main-nav {
     display: none;
     float: left;
-    margin-top: 35px;
-    margin-left: 25px;
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .main-nav li {
     display: block;
+    margin-left: 0;
   }
 
   .main-nav li a:link,
@@ -121,7 +146,7 @@
   }
 
   .sticky .main-nav {
-    margin-top: 10px;
+    margin-top: 6px;
   }
   .sticky .main-nav li a:link,
   .sticky .main-nav li a:visited {
@@ -129,7 +154,7 @@
   }
 
   .sticky .mobile-nav-icon {
-    margin-top: 10px;
+    margin-top: 6px;
   }
   .sticky .mobile-nav-icon i {
     color: #555;
@@ -142,11 +167,14 @@
     display: block;
   }
 
-  .h1 {
-    font-size: 180%;
+  .hero-text-box .btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
   }
-  .h2 {
-    font-size: 150%;
+  .hero-text-box .btn + .btn {
+    margin-top: 12px;
   }
 
   .long-copy {
@@ -176,13 +204,37 @@
     margin-bottom: 20px;
   }
   .plan-box {
-    font-size: 150%;
+    font-size: 100%;
+  }
+  .plan-price {
+    font-size: 230%;
+  }
+
+  .contact-form .row {
+    margin-bottom: 10px;
+  }
+  .contact-form .span-1-of-3,
+  .contact-form .span-2-of-3 {
+    width: 100%;
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 6px;
+  }
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 16px;
   }
 
   .footer-nav,
   .social-links {
     float: none;
     text-align: center;
+  }
+  .social-links {
+    margin-top: 12px;
   }
 }
 
@@ -203,10 +255,13 @@
   }
 
   .plan-box {
-    font-size: 125%;
+    font-size: 100%;
   }
 
   .contact-form {
     width: 100%;
+  }
+  .plan-price {
+    font-size: 200%;
   }
 }
