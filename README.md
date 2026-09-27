@@ -1,6 +1,6 @@
 # Weaver Bros Landscaping
 
-Website: https://jaymasur.github.io/Weaver-Bros/
+Website: https://weaverbroslandscaping.com/
 
 This repository serves the static website from the root `index.html`. The site source comes from `Weaver-Bros-Web.zip` and retains its original layout:
 
