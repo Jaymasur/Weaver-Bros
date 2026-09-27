@@ -1,88 +1,36 @@
+const menuButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-$(document).ready(function () {
-  // sticky navbar animation
-  $(".js--section-about-us").waypoint(
-    function (direction) {
-      if (direction == "down") {
-        $("nav").addClass("sticky");
-      } else {
-        $("nav").removeClass("sticky");
-      }
-    },
-    {
-      offset: "60px",
-    }
-  );
+if (menuButton && navLinks) {
+  const closeMenu = () => {
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open menu');
+    navLinks.classList.remove('open');
+    document.body.classList.remove('menu-open');
+  };
 
-  //   scroll to plans section animation
-  $(".js--scroll-to-contact").click(function () {
-    $("html, body").animate(
-      { scrollTop: $(".js--section-contact").offset().top },
-      500
-    );
-  });
-
-  //   scroll to specials section animation
-  $(".js--scroll-to-specials").click(function () {
-    $("html, body").animate(
-      { scrollTop: $(".js--section-specials").offset().top },
-      500
-    );
-  });
-
-  //   animations on scroll
-  //  services fade-in
-  $(".js--wp-1").waypoint(
-    function (direction) {
-      $(".js--wp-1").addClass("animated fadeIn");
-    },
-    {
-      offset: "50%",
-    }
-  );
-
-
-  // specials pulse animation
-  $(".js--wp-2").waypoint(
-    function (direction) {
-      $(".js--wp-2").addClass("animated pulse");
-    },
-    {
-      offset: "50%",
-    }
-  );
-
-  $(".js--wp-3").waypoint(
-    function (direction) {
-      $(".js--wp-3").addClass("animated pulse");
-    },
-    {
-      offset: "50%",
-    }
-  );
-
-  $(".js--wp-4").waypoint(
-    function (direction) {
-      $(".js--wp-4").addClass("animated pulse");
-    },
-    {
-      offset: "50%",
-    }
-  );
-
-  // mobile nav
-  $(".js--nav-icon").click(function () {
-    const nav = $(".js--main-nav");
-    const icon = $(".js--nav-icon i");
-
-    nav.slideToggle(200);
-
-    if (icon.hasClass("fa-bars")) {
-      icon.addClass("fa-times");
-      icon.removeClass("fa-bars");
+  menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      closeMenu();
     } else {
-      icon.addClass("fa-bars");
-      icon.removeClass("fa-times");
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuButton.setAttribute('aria-label', 'Close menu');
+      navLinks.classList.add('open');
+      document.body.classList.add('menu-open');
     }
   });
-});
+
+  navLinks.addEventListener('click', event => {
+    if (event.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) closeMenu();
+  });
+}
+
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();

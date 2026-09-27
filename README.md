@@ -1,72 +1,18 @@
-Weaver Bros Landscaping – Website
+# Weaver Bros Landscaping
 
-Live Website: https://jaymasur.github.io/Weaver-Bros/
+Website: https://jaymasur.github.io/Weaver-Bros/
 
-Developed By: Masur Consultant Services – https://jaymasur.github.io/MCS/
+This repository serves the static website from the root `index.html`. The site source comes from `Weaver-Bros-Web.zip` and retains its original layout:
 
-🌿 Overview
+```text
+index.html
+resources/
+  css/style.css
+  img/tree-crew.webp
+  img/tree-work.webp
+  img/weaver-bros-logo-transparent.png
+  js/script.js
+  js/analytics.js
+```
 
-This repository contains the fully responsive website for Weaver Bros Landscaping, a professional tree and lawn care service. The website highlights services, specials, testimonials, and includes a fully functional contact form for customer inquiries.
-
-The site is designed to be fast, clean, and mobile-friendly on all devices.
-
-🧰 Technologies Used
-
-HTML5
-
-CSS3
-
-Normalize.css
-
-Custom Grid.css layout
-
-JavaScript
-
-jQuery
-
-Waypoints.js (for scroll animations)
-
-Animate.css
-
-Ionicons
-
-Font Awesome
-
-FormSubmit (handles contact form messaging)
-
-🌱 Features
-✔ Modern Hero Section
-
-Clear call-to-action buttons for contacting or viewing specials.
-
-✔ Responsive Navigation
-
-Mobile toggle menu with smooth open/close behavior.
-
-✔ About Us Section
-
-Overview of Weaver Bros landscaping services.
-
-✔ Specials / Pricing Section
-
-Current service pricing displayed in clean, responsive cards.
-
-✔ Testimonials
-
-Customer testimonials with images.
-
-✔ Contact Form
-
-Fully functional using FormSubmit:
-
-Name
-
-Email
-
-Newsletter opt-in
-
-Message
-
-✔ Smooth Scroll & Animations
-
-Elements fade/slide into view on scroll for a polished experience.
+Open `index.html` in a browser or serve the repository root with a static file server. The site uses Google Fonts and Google Tag Manager; quote requests are sent through FormSubmit.
